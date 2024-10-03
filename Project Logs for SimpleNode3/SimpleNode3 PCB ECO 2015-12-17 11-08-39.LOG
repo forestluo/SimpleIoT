@@ -1,0 +1,10 @@
+Added Component: Designator=J3(TFCard ¿¨×ù ¶ÌÌå)
+Added Pin To Net: NetName=GPIO15 Pin=J3-1
+Added Pin To Net: NetName=GPIO13 Pin=J3-2
+Added Pin To Net: NetName=GPIO5 Pin=J3-3
+Added Pin To Net: NetName=VCC3V3 Pin=J3-4
+Added Pin To Net: NetName=GPIO4 Pin=J3-5
+Added Pin To Net: NetName=GND Pin=J3-6
+Added Pin To Net: NetName=GPIO12 Pin=J3-7
+Added Pin To Net: NetName=GPIO14 Pin=J3-8
+Added Member To Class: ClassName=SimpleNode3 Member=Component J3 Micro TFCard

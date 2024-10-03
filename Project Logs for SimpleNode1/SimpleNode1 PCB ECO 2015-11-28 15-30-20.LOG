@@ -1,0 +1,13 @@
+Added Pin To Net: NetName=VCC3V3 Pin=P2-1
+Added Pin To Net: NetName=GPIO13 Pin=P2-3
+Added Pin To Net: NetName=GPIO12 Pin=P2-4
+Added Pin To Net: NetName=GPIO14 Pin=P2-5
+Added Pin To Net: NetName=ADC Pin=P2-6
+Added Pin To Net: NetName=GPIO15 Pin=P3-1
+Added Pin To Net: NetName=GPIO2 Pin=P3-2
+Added Pin To Net: NetName=GPIO0 Pin=P3-3
+Added Pin To Net: NetName=GPIO5 Pin=P3-4
+Added Pin To Net: NetName=GPIO4 Pin=P3-5
+Added Pin To Net: NetName=GND Pin=P3-6
+Added Member To Class: ClassName=SimpleNode1 Member=Component P2 MHDR1X6
+Added Member To Class: ClassName=SimpleNode1 Member=Component P3 MHDR1X6

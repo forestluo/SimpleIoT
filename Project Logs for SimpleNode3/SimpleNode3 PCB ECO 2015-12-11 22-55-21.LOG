@@ -1,0 +1,12 @@
+Added Component: Designator=D4(LED0603)
+Added Component: Designator=D5(LED0603)
+Added Component: Designator=R4(R0402)
+Added Component: Designator=R5(R0402)
+Added Component: Designator=R6(R0603)
+Added Component: Designator=R7(R0603)
+Added Pin To Net: NetName=NetD4_1 Pin=D4-1
+Added Pin To Net: NetName=NetD4_1 Pin=R7-2
+Added Net: Name=NetD4_1
+Added Pin To Net: NetName=NetD5_1 Pin=D5-1
+Added Pin To Net: NetName=NetD5_1 Pin=R6-1
+Added Net: Name=NetD5_1

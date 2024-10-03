@@ -1,0 +1,14 @@
+Change Component DesignItemId : Designator=U2 Old DesignItemId= New DesignItemId=CP2102
+Change Component DesignItemId : Designator=Y1 Old DesignItemId= New DesignItemId=贴片无源晶振
+Change Component Description : Designator=U3 Old Description= New Description=ESP8266无线WiFi芯片
+Change Component Description : Designator=J1 Old Description= New Description=USB-A 公头
+Change Component Description : Designator=U4 Old Description= New Description=贴片2M存储Flash芯片
+Change Component Description : Designator=U1 Old Description= New Description=贴片5V转3.3V芯片
+Change Component Description : Designator=U2 Old Description= New Description=贴片USB转TTL
+Change Component Description : Designator=C12 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=Y1 Old Description= New Description=贴片无源晶振
+Added Component: Designator=R8(R0402)
+Added Pin To Net: NetName=VCC3V3 Pin=R8-1
+Added Pin To Net: NetName=NetR8_2 Pin=R8-2
+Added Member To Class: ClassName=SimpleNode31 Member=Component R8 1%
+Added Room: Name=SimpleNode31

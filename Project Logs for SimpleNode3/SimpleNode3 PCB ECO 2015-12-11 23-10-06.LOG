@@ -1,0 +1,16 @@
+Added Pin To Net: NetName=NetD4_1 Pin=D4-1
+Added Pin To Net: NetName=TXD Pin=D4-2
+Added Pin To Net: NetName=NetD5_1 Pin=D5-1
+Added Pin To Net: NetName=RXD Pin=D5-2
+Added Pin To Net: NetName=VCC3V3 Pin=R4-1
+Added Pin To Net: NetName=NetD4_1 Pin=R4-2
+Added Pin To Net: NetName=NetD5_1 Pin=R5-1
+Added Pin To Net: NetName=VCC3V3 Pin=R5-2
+Added Pin To Net: NetName=TXD Pin=R6-1
+Added Pin To Net: NetName=RXD Pin=R7-1
+Added Member To Class: ClassName=SimpleNode3 Member=Component D4 TXD
+Added Member To Class: ClassName=SimpleNode3 Member=Component D5 LED
+Added Member To Class: ClassName=SimpleNode3 Member=Component R4 5%
+Added Member To Class: ClassName=SimpleNode3 Member=Component R5 5%
+Added Member To Class: ClassName=SimpleNode3 Member=Component R6 5%
+Added Member To Class: ClassName=SimpleNode3 Member=Component R7 5%

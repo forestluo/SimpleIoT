@@ -1,0 +1,487 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body {
+			font-family : verdana;
+		}
+		td, th {
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;
+		}
+		th {
+			background-color : #A6CAF0;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+		}
+		
+		.DRC_summary_header {							
+			padding-bottom : 0.1em;
+			border : 0px solid black;							
+			width: 100%;
+                        align: right;
+                        
+		}
+
+		.DRC_summary_header_col1, 
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3
+		{
+			color : black;
+			font-size:150%;
+                        padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2: 0em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top;
+			font-weight: bold;				
+		}
+		
+		.DRC_summary_header_col1 	
+		{		                       
+			text-align: right;
+                        width: auto;	
+		}
+
+		.DRC_summary_header_col2 	
+		{		
+			text-align: center;	
+		}
+
+		.DRC_summary_header_col3 	
+		{		
+			text-align: left;	
+		}
+
+
+		
+		.header_holder
+		{
+		Width = 100%;
+		border = 0px solid green;
+		padding = 0;
+		}
+		
+		
+		
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+                {
+			left:0;
+			top:0;
+			padding-top : 0.1em;			
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top
+
+		}
+		.front_matter {	
+			
+			margin-top: 5px;
+ 			margin-left: 0px;					 			
+ 			horizontal-align: left;
+		}
+				
+		
+		.front_matter_column1 {
+			width : 10em;	
+			text-align  : right;
+			padding-right:0.1em;
+			
+		}
+		
+		.front_matter_column2 {
+                        width: 0.1em;
+			align: center;
+			text-align : center;
+			margin-right  : 0.1em;	
+			margin-left   : 0.1em;
+		}
+		.front_matter_column3 {
+			width         : auto;  
+			text-align    : left;	
+			margin-right  : 0.5em;				
+		}
+		
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD 10\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td Style="width:70%">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">2015/12/9</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">10:10:14</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc" class="file"><acronym title="E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc">E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td Style="Width:30%">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3" style="color : red">24</td></tr>
+</table>
+</td>
+</table>
+<hr><a name="IDCV33I3QDZBAZH3VJXYDA5TBF3MDDLUK3Q2ZNEPCI4F5HMAYX20GM"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID43WAS5D2JRRRJLPLIHDLBB0XAJOVBW04LV00ZIERBTYA5TIEHBWD">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYEDK111SE1A2O0TKZGLA0DL4PLW0FIBITZ2EDPHOICXWQNNKKGQK">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">12</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDN0BAOPWL50TGLM1BGR1UZGW2IHFPQZ02IMKTW4COA4AKEAJLTGFP">Silkscreen Over Component Pads (Clearance=0mm) (Disabled)(All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPZMOV5NSUDJ2MDSMB1IQ4FIN1DHSULMZA2EKQJG1CAJPB0K53R4N">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDN1U3JKRZOBOIIA14CFUWCMFRPJC32RTXGPLVGDH0LB11YRH14OII">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1IKUU2E5LR3FFKDFJPFWX3Q5ZLF1GV3MGQNUJWMBUUJZ1PTRW5ZK">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQFDAGQO1GOW5G2W2DPFTOWHXOMSGBWE00TLWQLV1KO1BMS1Q1SD">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDEUNKOXL2WI1EX5NIS5RSKJNJDFATXAMOWZFJEP5AW31DQ0PTYQF">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQ2G0JMGMN3UUEHL4EJUMJBGSGNCWNC2YZA3DU0PELZFYYCYPDG5B">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTVLR5OUYKATSDO0UHDZ2GPCQPKIY1DVMAOOXRRIQ54PJHB5XBADK">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3PBYF4IKNLUWJPLJISOXJBEV1JPLQZYB0GW2OPKGLOOLVPNL4XBK">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLO3VSPBVB4CBDXJHGTOII5HI2DBRSHO4S54AWSKBHXZ3M3QMKHOI">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNVKYMHFLGXQ5MVZMYCYF0QRZFLO3ZGOGV5IB2BMVR25CXSKRNUVK">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (InDifferentialPair('USB Data Line Pair'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXTVA1UWX5SLMNDKVLR3MKE3T3IHPJ3QZXH1S1PBUM31QATHEEN1O">Matched Net Lengths(Tolerance=25.4mm) (InDifferentialPair ('USB Data Line Pair'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRGKSV0NHIY1TL50CRSYHJPHZAKAG3Z51BNTNRTKN1TIGHULP443M">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (InDifferentialPair('USB Data Line Pair'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4QR5M2Z50KPHKWXAPXQNR1Q1CFZPOBEXTHY1XMIFMDZIF2AQF51F">Matched Net Lengths(Tolerance=25.4mm) (InDifferentialPair ('USB Data Line Pair'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTKPGRYLXPJFCGAHPXCA1GPTBCH4NAZ0VSFKE5XDTSKIJHDT4ZDLP">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (InDifferentialPair('RS232 Data Line Pair'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQMZDULZ4KFKLKQRJRQ4AG4P5LDKXRFZV3BIM1DCFDRY04NLEQ0IP">Matched Net Lengths(Tolerance=25.4mm) (InDifferentialPair ('RS232 Data Line Pair'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOJ50MU0P221VGLEINLTW521H5LUILDJZKJUEDCGFJKPG1VYNGOKJ">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (InDifferentialPair('XTAL Data Line Pair'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDC213PPCSNLKDPQV5B1MMA2OQWBF1ZAVZ1RQQPRF0T3XV3XKJOIQL">Matched Net Lengths(Tolerance=25.4mm) (InDifferentialPair ('XTAL Data Line Pair'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHF0ZTCTNLWU5M1FAGIH2EP4ZHCNKWVPPYS3XJZMX1YIRX1AMJ0OE">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFFI1EP52HXQDLOUN5CXR3E2SXOTEJJ1UK2BI20IPRHOQVFUAHR3I">Matched Net Lengths(Tolerance=25.4mm) (All)</a></td>
+<td class="column2">9</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWOXAKEM4RPB4DQ4P1GK345J25ET3SNLGZXZRZAN01GR0WNMSMIDE">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (InDifferentialPair('XTAL Line Pair'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5ICHT25BCUS2OUARPZF5SJ2FFI0L5ERA1K5J15OXMR5O4FPSUSTN">Matched Net Lengths(Tolerance=25.4mm) (InDifferentialPair ('XTAL Line Pair'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEXUVPAVWFPPMHTGH0VDBCCHKLDILFEIXTPNCTBMMJHZ15WOE2Z2K">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (InDifferentialPair('RS232 Line Pair'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5J4HLYGV0UIVDJHYICJSUNSNWBRT4X3WM2GVENFU514JQPUHXN1D">Matched Net Lengths(Tolerance=25.4mm) (InDifferentialPair ('RS232 Line Pair'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">24</td>
+</tr>
+</table><br><hr><a name="IDYEDK111SE1A2O0TKZGLA0DL4PLW0FIBITZ2EDPHOICXWQNNKKGQK"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Silk to Silk (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2570.032mil|Location2.X=2690mil|Location1.Y=2445mil|Location2.Y=2524.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2570.032mil|Location2.X=2690mil|Location1.Y=2445mil|Location2.Y=2524.981mil|Absolute=True">Text "C2" (68.072mm,62.357mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2692.968mil|Location2.X=2706.969mil|Location1.Y=2452.422mil|Location2.Y=2517.577mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2692.968mil|Location2.X=2706.969mil|Location1.Y=2452.422mil|Location2.Y=2517.577mil|Absolute=True">Arc (70.279mm,63.119mm)  Bottom Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2465.032mil|Location2.X=2585mil|Location1.Y=3090mil|Location2.Y=3169.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2465.032mil|Location2.X=2585mil|Location1.Y=3090mil|Location2.Y=3169.981mil|Absolute=True">Text "C7" (65.405mm,78.74mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2587.968mil|Location2.X=2601.969mil|Location1.Y=3097.422mil|Location2.Y=3162.577mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2587.968mil|Location2.X=2601.969mil|Location1.Y=3097.422mil|Location2.Y=3162.577mil|Absolute=True">Arc (67.612mm,79.502mm)  Bottom Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3050mil|Location2.X=3129.981mil|Location1.Y=2690mil|Location2.Y=2809.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3050mil|Location2.X=3129.981mil|Location1.Y=2690mil|Location2.Y=2809.968mil|Absolute=True">Text "C3" (77.724mm,68.58mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3057.422mil|Location2.X=3122.578mil|Location1.Y=2673.031mil|Location2.Y=2687.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3057.422mil|Location2.X=3122.578mil|Location1.Y=2673.031mil|Location2.Y=2687.032mil|Absolute=True">Arc (78.486mm,66.373mm)  Bottom Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3125mil|Location2.X=3204.981mil|Location1.Y=2690mil|Location2.Y=2809.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3125mil|Location2.X=3204.981mil|Location1.Y=2690mil|Location2.Y=2809.968mil|Absolute=True">Text "C4" (79.629mm,68.58mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3132.422mil|Location2.X=3197.578mil|Location1.Y=2673.031mil|Location2.Y=2687.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3132.422mil|Location2.X=3197.578mil|Location1.Y=2673.031mil|Location2.Y=2687.032mil|Absolute=True">Arc (80.391mm,66.373mm)  Bottom Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3050.019mil|Location2.X=3130mil|Location1.Y=2970.032mil|Location2.Y=3090mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3050.019mil|Location2.X=3130mil|Location1.Y=2970.032mil|Location2.Y=3090mil|Absolute=True">Text "C5" (79.248mm,78.232mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3057.422mil|Location2.X=3122.578mil|Location1.Y=2953.031mil|Location2.Y=2967.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3057.422mil|Location2.X=3122.578mil|Location1.Y=2953.031mil|Location2.Y=2967.032mil|Absolute=True">Arc (78.486mm,73.485mm)  Bottom Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3125.019mil|Location2.X=3205mil|Location1.Y=2970.032mil|Location2.Y=3090mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3125.019mil|Location2.X=3205mil|Location1.Y=2970.032mil|Location2.Y=3090mil|Absolute=True">Text "C6" (81.153mm,78.232mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3132.422mil|Location2.X=3197.578mil|Location1.Y=2953.031mil|Location2.Y=2967.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3132.422mil|Location2.X=3197.578mil|Location1.Y=2953.031mil|Location2.Y=2967.032mil|Absolute=True">Arc (80.391mm,73.485mm)  Bottom Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2855mil|Location2.X=2934.981mil|Location1.Y=2850.032mil|Location2.Y=2970mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2855mil|Location2.X=2934.981mil|Location1.Y=2850.032mil|Location2.Y=2970mil|Absolute=True">Text "U2" (72.771mm,75.184mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2926.497mil|Location2.X=2934.371mil|Location1.Y=2704.213mil|Location2.Y=3105.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2926.497mil|Location2.X=2934.371mil|Location1.Y=2704.213mil|Location2.Y=3105.787mil|Absolute=True">Track (74.433mm,68.787mm)(74.433mm,78.787mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2855mil|Location2.X=2934.981mil|Location1.Y=2850.032mil|Location2.Y=2970mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2855mil|Location2.X=2934.981mil|Location1.Y=2850.032mil|Location2.Y=2970mil|Absolute=True">Text "U2" (72.771mm,75.184mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2855.631mil|Location2.X=2863.505mil|Location1.Y=2704.213mil|Location2.Y=3105.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2855.631mil|Location2.X=2863.505mil|Location1.Y=2704.213mil|Location2.Y=3105.787mil|Absolute=True">Track (72.633mm,68.787mm)(72.633mm,78.787mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3190mil|Location2.X=3309.968mil|Location1.Y=3045mil|Location2.Y=3124.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3190mil|Location2.X=3309.968mil|Location1.Y=3045mil|Location2.Y=3124.981mil|Absolute=True">Text "R3" (81.28mm,77.597mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3190mil|Location2.X=3309.968mil|Location1.Y=2965mil|Location2.Y=3044.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3190mil|Location2.X=3309.968mil|Location1.Y=2965mil|Location2.Y=3044.981mil|Absolute=True">Text "D3" (81.28mm,75.565mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3190mil|Location2.X=3309.968mil|Location1.Y=2770mil|Location2.Y=2849.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3190mil|Location2.X=3309.968mil|Location1.Y=2770mil|Location2.Y=2849.981mil|Absolute=True">Text "R4" (81.28mm,70.612mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3190mil|Location2.X=3309.968mil|Location1.Y=2695mil|Location2.Y=2774.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3190mil|Location2.X=3309.968mil|Location1.Y=2695mil|Location2.Y=2774.981mil|Absolute=True">Text "D4" (81.28mm,68.707mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3125mil|Location2.X=3204.981mil|Location1.Y=2690mil|Location2.Y=2809.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3125mil|Location2.X=3204.981mil|Location1.Y=2690mil|Location2.Y=2809.968mil|Absolute=True">Text "C4" (79.629mm,68.58mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3050mil|Location2.X=3129.981mil|Location1.Y=2690mil|Location2.Y=2809.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3050mil|Location2.X=3129.981mil|Location1.Y=2690mil|Location2.Y=2809.968mil|Absolute=True">Text "C3" (77.724mm,68.58mm)  Bottom Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3125.019mil|Location2.X=3205mil|Location1.Y=2970.032mil|Location2.Y=3090mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3125.019mil|Location2.X=3205mil|Location1.Y=2970.032mil|Location2.Y=3090mil|Absolute=True">Text "C6" (81.153mm,78.232mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3050.019mil|Location2.X=3130mil|Location1.Y=2970.032mil|Location2.Y=3090mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3050.019mil|Location2.X=3130mil|Location1.Y=2970.032mil|Location2.Y=3090mil|Absolute=True">Text "C5" (79.248mm,78.232mm)  Bottom Overlay</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDPZMOV5NSUDJ2MDSMB1IQ4FIN1DHSULMZA2EKQJG1CAJPB0K53R4N"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2691mil|Location2.X=2749mil|Location1.Y=2941mil|Location2.Y=2999mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2691mil|Location2.X=2749mil|Location1.Y=2941mil|Location2.Y=2999mil|Absolute=True">Via (69.088mm,75.438mm) Top Layer to Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2753.205mil|Location2.X=2847.819mil|Location1.Y=2964.189mil|Location2.Y=2995.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2753.205mil|Location2.X=2847.819mil|Location1.Y=2964.189mil|Location2.Y=2995.811mil|Absolute=True">Pad U2-3(71.133mm,75.692mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2691mil|Location2.X=2749mil|Location1.Y=3006mil|Location2.Y=3064mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2691mil|Location2.X=2749mil|Location1.Y=3006mil|Location2.Y=3064mil|Absolute=True">Via (69.088mm,77.089mm) Top Layer to Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2753.205mil|Location2.X=2847.819mil|Location1.Y=3014.189mil|Location2.Y=3045.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2753.205mil|Location2.X=2847.819mil|Location1.Y=3014.189mil|Location2.Y=3045.811mil|Absolute=True">Pad U2-2(71.133mm,76.962mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2691mil|Location2.X=2749mil|Location1.Y=2941mil|Location2.Y=2999mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2691mil|Location2.X=2749mil|Location1.Y=2941mil|Location2.Y=2999mil|Absolute=True">Via (69.088mm,75.438mm) Top Layer to Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2691mil|Location2.X=2749mil|Location1.Y=3006mil|Location2.Y=3064mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2691mil|Location2.X=2749mil|Location1.Y=3006mil|Location2.Y=3064mil|Absolute=True">Via (69.088mm,77.089mm) Top Layer to Bottom Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDFFI1EP52HXQDLOUN5CXR3E2SXOTEJJ1UK2BI20IPRHOQVFUAHR3I"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Matched Net Lengths(Tolerance=25.4mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2667.811mil|Location2.X=2847.819mil|Location1.Y=2866mil|Location2.Y=3153.685mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2667.811mil|Location2.X=2847.819mil|Location1.Y=2866mil|Location2.Y=3153.685mil|Absolute=True">Matched Net Lengths: Net NetC7_2</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3405.493mil|Location2.X=3453.685mil|Location1.Y=2742.81mil|Location2.Y=3043.257mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3405.493mil|Location2.X=3453.685mil|Location1.Y=2742.81mil|Location2.Y=3043.257mil|Absolute=True">Matched Net Lengths: Net NetD2_1</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3320.493mil|Location2.X=3373.685mil|Location1.Y=2742.81mil|Location2.Y=3043.257mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3320.493mil|Location2.X=3373.685mil|Location1.Y=2742.81mil|Location2.Y=3043.257mil|Absolute=True">Matched Net Lengths: Net NetD1_1</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3048.988mil|Location2.X=3174.117mil|Location1.Y=2975.495mil|Location2.Y=3103.685mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3048.988mil|Location2.X=3174.117mil|Location1.Y=2975.495mil|Location2.Y=3103.685mil|Absolute=True">Matched Net Lengths: Net NetD3_1</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3053.988mil|Location2.X=3107.189mil|Location1.Y=2710.495mil|Location2.Y=2833.685mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3053.988mil|Location2.X=3107.189mil|Location1.Y=2710.495mil|Location2.Y=2833.685mil|Absolute=True">Matched Net Lengths: Net NetD4_1</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2551.787mil|Location2.X=2847.819mil|Location1.Y=2813.441mil|Location2.Y=2895.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2551.787mil|Location2.X=2847.819mil|Location1.Y=2813.441mil|Location2.Y=2895.811mil|Absolute=True">Matched Net Lengths: Net UD+</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2551.787mil|Location2.X=2847.819mil|Location1.Y=2733.441mil|Location2.Y=2845.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2551.787mil|Location2.X=2847.819mil|Location1.Y=2733.441mil|Location2.Y=2845.811mil|Absolute=True">Matched Net Lengths: Net UD-</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2823.087mil|Location2.X=3453.685mil|Location1.Y=2675.882mil|Location2.Y=3052.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2823.087mil|Location2.X=3453.685mil|Location1.Y=2675.882mil|Location2.Y=3052.386mil|Absolute=True">Matched Net Lengths: Net VCC3V3</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2551.787mil|Location2.X=3188.685mil|Location1.Y=2622.811mil|Location2.Y=3103.685mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2551.787mil|Location2.X=3188.685mil|Location1.Y=2622.811mil|Location2.Y=3103.685mil|Absolute=True">Matched Net Lengths: Net VCC5V</acronym></a><br></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

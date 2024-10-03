@@ -1,0 +1,27 @@
+Change Component DesignItemId : Designator=S1 Old DesignItemId= New DesignItemId=KEY
+Change Component DesignItemId : Designator=S2 Old DesignItemId= New DesignItemId=KEY
+Change Component DesignItemId : Designator=C7 Old DesignItemId=? New DesignItemId=普通电容
+Change Component DesignItemId : Designator=C13 Old DesignItemId=? New DesignItemId=普通电容
+Change Component DesignItemId : Designator=C14 Old DesignItemId=? New DesignItemId=普通电容
+Change Component DesignItemId : Designator=R6 Old DesignItemId=R New DesignItemId=RES
+Change Component DesignItemId : Designator=R7 Old DesignItemId=R New DesignItemId=RES
+Change Component DesignItemId : Designator=R8 Old DesignItemId=R New DesignItemId=RES
+Change Component DesignItemId : Designator=R9 Old DesignItemId=R New DesignItemId=RES
+Change Component DesignItemId : Designator=R10 Old DesignItemId=R New DesignItemId=RES
+Change Component DesignItemId : Designator=R11 Old DesignItemId=R New DesignItemId=RES
+Change Component DesignItemId : Designator=R12 Old DesignItemId=R New DesignItemId=RES
+Change Component DesignItemId : Designator=R13 Old DesignItemId=R New DesignItemId=RES
+Change Component DesignItemId : Designator=R14 Old DesignItemId=R New DesignItemId=RES
+Change Component DesignItemId : Designator=R15 Old DesignItemId=R New DesignItemId=RES
+Change Component DesignItemId : Designator=R16 Old DesignItemId=R New DesignItemId=RES
+Change Component DesignItemId : Designator=R17 Old DesignItemId=R New DesignItemId=RES
+Change Component DesignItemId : Designator=R18 Old DesignItemId=R New DesignItemId=RES
+Change Component DesignItemId : Designator=R19 Old DesignItemId=R New DesignItemId=RES
+Change Component Description : Designator=C7 Old Description= New Description=Capacitor
+Change Component Description : Designator=C13 Old Description= New Description=Capacitor
+Change Component Description : Designator=C14 Old Description= New Description=Capacitor
+Change Component Description : Designator=U5 Old Description=3.3V稳? New Description=3.3V稳压芯片
+Change Component Description : Designator=J3 Old Description=USB接? New Description=USB接口
+Change Component Library : Designator=S1 Old Library=常用元件库.SC New Library=常用元件库.SCHLIB
+Change Component Library : Designator=S2 Old Library=常用元件库.SC New Library=常用元件库.SCHLIB
+Change Class Name : Old Net Name=SimpleNode New Net Name=SimpleNode1

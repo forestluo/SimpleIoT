@@ -1,0 +1,13 @@
+Added Component: Designator=U2(MLP28)
+Added Pin To Net: NetName=GND Pin=U2-3
+Added Pin To Net: NetName=GND Pin=U2-3
+Added Pin To Net: NetName=UD_P Pin=U2-4
+Added Pin To Net: NetName=UD_N Pin=U2-5
+Added Pin To Net: NetName=NetC4_2 Pin=U2-6
+Added Pin To Net: NetName=VCC3V3 Pin=U2-7
+Added Pin To Net: NetName=VCC3V3 Pin=U2-8
+Added Pin To Net: NetName=VCC3V3 Pin=U2-9
+Added Pin To Net: NetName=NetR3_2 Pin=U2-11
+Added Pin To Net: NetName=RXD Pin=U2-25
+Added Pin To Net: NetName=TXD Pin=U2-26
+Added Member To Class: ClassName=SimpleNode3 Member=Component U2 CP2102

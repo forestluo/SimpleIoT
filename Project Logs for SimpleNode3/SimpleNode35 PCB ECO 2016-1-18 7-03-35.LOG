@@ -1,0 +1,32 @@
+Change Component Description : Designator=J1 Old Description= New Description=USB-A 公头
+Change Component Description : Designator=U2 Old Description= New Description=贴片USB转TTL
+Change Component Description : Designator=C10 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C11 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C12 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=Y1 Old Description= New Description=贴片无源晶振
+Change Component Description : Designator=L1 Old Description= New Description=贴片电感
+Change Component Description : Designator=L2 Old Description= New Description=贴片电感
+Change Component Description : Designator=R8 Old Description= New Description=贴片电阻
+Change Component Description : Designator=A1 Old Description=? New Description=贴片2.4G陶瓷天线
+Change Component Description : Designator=U3 Old Description=ESP826 New Description=ESP8266无线WiFi芯片
+Change Component Description : Designator=U1 Old Description=贴 New Description=贴片5V转3.3V芯片
+Change Component Description : Designator=U4 Old Description=贴片 New Description=贴片2M存储Flash芯片
+Added Component: Designator=D6(LED0402)
+Added Component: Designator=D7(LED0402)
+Added Component: Designator=R4(R0402)
+Added Component: Designator=R5(R0402)
+Added Pin To Net: NetName=TXD Pin=D6-2
+Added Pin To Net: NetName=RXD Pin=D7-2
+Added Pin To Net: NetName=VCC3V3 Pin=R4-2
+Added Pin To Net: NetName=VCC3V3 Pin=R5-1
+Added Pin To Net: NetName=NetD6_1 Pin=D6-1
+Added Pin To Net: NetName=NetD6_1 Pin=R4-1
+Added Net: Name=NetD6_1
+Added Pin To Net: NetName=NetD7_1 Pin=D7-1
+Added Pin To Net: NetName=NetD7_1 Pin=R5-2
+Added Net: Name=NetD7_1
+Added Member To Class: ClassName=SimpleNode31 Member=Component D6 TXD
+Added Member To Class: ClassName=SimpleNode31 Member=Component D7 RXD
+Added Member To Class: ClassName=SimpleNode31 Member=Component R4 5%
+Added Member To Class: ClassName=SimpleNode31 Member=Component R5 5%
+Added Room: Name=SimpleNode31

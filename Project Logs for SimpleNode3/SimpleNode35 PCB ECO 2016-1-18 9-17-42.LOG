@@ -1,0 +1,4 @@
+Added Component: Designator=R16(R0402)
+Added Pin To Net: NetName=NetC7_2 Pin=R16-1
+Added Pin To Net: NetName=GPIO16 Pin=R16-2
+Added Member To Class: ClassName=SimpleNode31 Member=Component R16 5%

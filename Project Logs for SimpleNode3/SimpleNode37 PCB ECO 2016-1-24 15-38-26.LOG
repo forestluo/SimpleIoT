@@ -1,0 +1,45 @@
+Change Component Description : Designator=J1 Old Description= New Description=USB-A 公头
+Change Component Description : Designator=D1 Old Description= New Description=贴片发光二级管
+Change Component Description : Designator=D2 Old Description= New Description=贴片发光二级管
+Change Component Description : Designator=D3 Old Description= New Description=贴片发光二级管
+Change Component Description : Designator=D4 Old Description= New Description=贴片发光二级管
+Change Component Description : Designator=D5 Old Description= New Description=贴片发光二级管
+Change Component Description : Designator=D6 Old Description= New Description=贴片发光二级管
+Change Component Description : Designator=D7 Old Description= New Description=贴片发光二级管
+Change Component Description : Designator=C1 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C2 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C3 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C4 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C5 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C6 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C7 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C9 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C10 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C11 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C12 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=Y1 Old Description= New Description=贴片无源晶振
+Change Component Description : Designator=R1 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R2 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R3 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R4 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R5 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R6 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R7 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R8 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R9 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R10 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R11 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R12 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R13 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R14 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R15 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R16 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R17 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R19 Old Description= New Description=贴片电阻
+Change Component Description : Designator=U3 Old Description=ESP8266无 New Description=ESP8266无线WiFi芯片
+Change Component Description : Designator=U4 Old Description=贴片2M New Description=贴片2M存储Flash芯片
+Change Component Description : Designator=U1 Old Description=贴片 New Description=贴片5V转3.3V芯片
+Change Component Description : Designator=U2 Old Description=贴片 New Description=贴片USB转TTL
+Added Component: Designator=A1(AN9520-245)
+Added Pin To Net: NetName=NetA1_1 Pin=A1-1
+Added Member To Class: ClassName=SimpleNode32 Member=Component A1 2.4GHz

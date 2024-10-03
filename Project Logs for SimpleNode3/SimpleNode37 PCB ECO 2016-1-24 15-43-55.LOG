@@ -1,0 +1,7 @@
+Change Component Description : Designator=U3 Old Description=ESP8266ÎŞ New Description=ESP8266ÎŞÏßWiFiĞ¾Æ¬
+Change Component Description : Designator=U4 Old Description=ÌùÆ¬2M New Description=ÌùÆ¬2M´æ´¢FlashĞ¾Æ¬
+Change Component Description : Designator=U1 Old Description=ÌùÆ¬ New Description=ÌùÆ¬5V×ª3.3VĞ¾Æ¬
+Change Component Description : Designator=U2 Old Description=ÌùÆ¬ New Description=ÌùÆ¬USB×ªTTL
+Added Component: Designator=A1(AN9520-245)
+Added Pin To Net: NetName=NetA1_1 Pin=A1-1
+Added Member To Class: ClassName=SimpleNode32 Member=Component A1 2.4GHz

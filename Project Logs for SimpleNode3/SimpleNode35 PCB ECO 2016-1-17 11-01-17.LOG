@@ -1,0 +1,11 @@
+Change Component Description : Designator=J1 Old Description= New Description=USB-A 公头
+Change Component Description : Designator=U2 Old Description= New Description=贴片USB转TTL
+Change Component Description : Designator=C12 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=Y1 Old Description= New Description=贴片无源晶振
+Change Component Description : Designator=L1 Old Description= New Description=贴片电感
+Change Component Description : Designator=L2 Old Description= New Description=贴片电感
+Change Component Description : Designator=A1 Old Description=? New Description=贴片2.4G陶瓷天线
+Change Component Description : Designator=U3 Old Description=ESP826 New Description=ESP8266无线WiFi芯片
+Change Component Description : Designator=U1 Old Description=贴 New Description=贴片5V转3.3V芯片
+Change Component Description : Designator=U4 Old Description=贴片 New Description=贴片2M存储Flash芯片
+Added Room: Name=SimpleNode31

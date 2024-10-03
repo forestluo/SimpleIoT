@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=NetA1_1 Pin=A1-1
+Added Pin To Net: NetName=GND Pin=A1-2
+Added Pin To Net: NetName=GND Pin=A1-3
+Added Pin To Net: NetName=NetA1_1 Pin=A2-1
+Added Member To Class: ClassName=SimpleNode3 Member=Component A1 50ohm
+Added Member To Class: ClassName=SimpleNode3 Member=Component A2 2.4GHz

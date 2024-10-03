@@ -1,0 +1,127 @@
+Change Component DesignItemId : Designator=D1 Old DesignItemId= New DesignItemId=贴片发光二级管
+Change Component DesignItemId : Designator=D2 Old DesignItemId= New DesignItemId=贴片发光二级管
+Change Component DesignItemId : Designator=C1 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=C2 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=C3 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=C4 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=R1 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component DesignItemId : Designator=R2 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component DesignItemId : Designator=R3 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component Description : Designator=J1 Old Description= New Description=USB-A 公头
+Change Component Description : Designator=U1 Old Description= New Description=贴片5V转3.3V芯片
+Change Component Description : Designator=D1 Old Description= New Description=贴片发光二级管
+Change Component Description : Designator=D2 Old Description= New Description=贴片发光二级管
+Change Component Description : Designator=D3 Old Description= New Description=贴片发光二级管
+Change Component Description : Designator=C1 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C2 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C3 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C4 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C5 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=R1 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R2 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R3 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R4 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R5 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R6 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R7 Old Description= New Description=贴片电阻
+Added Component: Designator=C6(C0402)
+Added Component: Designator=C7(C0402)
+Added Component: Designator=C8(C0402)
+Added Component: Designator=C9(C0402)
+Added Component: Designator=C10(C0402)
+Added Component: Designator=C11(C0402)
+Added Component: Designator=D6(LED0402)
+Added Component: Designator=R8(R0402)
+Added Component: Designator=R9(R0402)
+Added Component: Designator=R10(R0402)
+Added Component: Designator=R11(R0402)
+Added Component: Designator=R12(R0402)
+Added Component: Designator=R13(R0402)
+Added Component: Designator=R14(R0402)
+Added Component: Designator=R15(R0402)
+Added Component: Designator=R16(R0402)
+Added Component: Designator=R17(R0402)
+Added Component: Designator=R18(R0402)
+Added Component: Designator=R19(R0402)
+Added Component: Designator=U3(QFN32L)
+Added Component: Designator=U4(SOIC8)
+Added Component: Designator=Y1(XTAL-2520)
+Added Pin To Net: NetName=ADC Pin=U3-6
+Added Net: Name=ADC
+Added Pin To Net: NetName=GPIO0 Pin=R11-2
+Added Pin To Net: NetName=GPIO0 Pin=R12-1
+Added Pin To Net: NetName=GPIO0 Pin=U3-15
+Added Net: Name=GPIO0
+Added Pin To Net: NetName=GPIO2 Pin=R10-2
+Added Pin To Net: NetName=GPIO2 Pin=U3-14
+Added Net: Name=GPIO2
+Added Pin To Net: NetName=GPIO4 Pin=U3-16
+Added Net: Name=GPIO4
+Added Pin To Net: NetName=GPIO5 Pin=U3-24
+Added Net: Name=GPIO5
+Added Pin To Net: NetName=GPIO12 Pin=U3-10
+Added Net: Name=GPIO12
+Added Pin To Net: NetName=GPIO13 Pin=U3-12
+Added Net: Name=GPIO13
+Added Pin To Net: NetName=GPIO14 Pin=U3-9
+Added Net: Name=GPIO14
+Added Pin To Net: NetName=GPIO15 Pin=R9-2
+Added Pin To Net: NetName=GPIO15 Pin=U3-13
+Added Net: Name=GPIO15
+Added Pin To Net: NetName=GPIO16 Pin=D6-2
+Added Pin To Net: NetName=GPIO16 Pin=R18-1
+Added Pin To Net: NetName=GPIO16 Pin=U3-8
+Added Net: Name=GPIO16
+Added Pin To Net: NetName=NetC7_1 Pin=C7-1
+Added Pin To Net: NetName=NetC7_1 Pin=U3-27
+Added Pin To Net: NetName=NetC7_1 Pin=Y1-1
+Added Net: Name=NetC7_1
+Added Pin To Net: NetName=NetC10_1 Pin=C10-1
+Added Pin To Net: NetName=NetC10_1 Pin=U3-28
+Added Pin To Net: NetName=NetC10_1 Pin=Y1-3
+Added Net: Name=NetC10_1
+Added Pin To Net: NetName=NetC11_2 Pin=C11-2
+Added Pin To Net: NetName=NetC11_2 Pin=R15-1
+Added Pin To Net: NetName=NetC11_2 Pin=R16-2
+Added Pin To Net: NetName=NetC11_2 Pin=U3-32
+Added Net: Name=NetC11_2
+Added Pin To Net: NetName=NetD6_1 Pin=D6-1
+Added Pin To Net: NetName=NetD6_1 Pin=R17-2
+Added Net: Name=NetD6_1
+Added Pin To Net: NetName=NetR8_2 Pin=R8-2
+Added Pin To Net: NetName=NetR8_2 Pin=U3-7
+Added Net: Name=NetR8_2
+Added Pin To Net: NetName=NetR12_2 Pin=R12-2
+Added Pin To Net: NetName=NetR12_2 Pin=R13-2
+Added Net: Name=NetR12_2
+Added Pin To Net: NetName=NetR14_1 Pin=R14-1
+Added Pin To Net: NetName=NetR14_1 Pin=U3-31
+Added Net: Name=NetR14_1
+Added Pin To Net: NetName=NetR16_1 Pin=R16-1
+Added Pin To Net: NetName=NetR16_1 Pin=R18-2
+Added Pin To Net: NetName=NetR16_1 Pin=R19-2
+Added Net: Name=NetR16_1
+Added Pin To Net: NetName=SD_CLK Pin=U3-21
+Added Pin To Net: NetName=SD_CLK Pin=U4-6
+Added Net: Name=SD_CLK
+Added Pin To Net: NetName=SD_CMD Pin=U3-20
+Added Pin To Net: NetName=SD_CMD Pin=U4-1
+Added Net: Name=SD_CMD
+Added Pin To Net: NetName=SD_DATA_0 Pin=U3-22
+Added Pin To Net: NetName=SD_DATA_0 Pin=U4-2
+Added Net: Name=SD_DATA_0
+Added Pin To Net: NetName=SD_DATA_1 Pin=U3-23
+Added Pin To Net: NetName=SD_DATA_1 Pin=U4-5
+Added Net: Name=SD_DATA_1
+Added Pin To Net: NetName=SD_DATA_2 Pin=U3-18
+Added Pin To Net: NetName=SD_DATA_2 Pin=U4-7
+Added Net: Name=SD_DATA_2
+Added Pin To Net: NetName=SD_DATA_3 Pin=U3-19
+Added Pin To Net: NetName=SD_DATA_3 Pin=U4-3
+Added Net: Name=SD_DATA_3
+Added Pin To Net: NetName=U0RXD Pin=R6-2
+Added Pin To Net: NetName=U0RXD Pin=U3-25
+Added Net: Name=U0RXD
+Added Pin To Net: NetName=U0TXD Pin=R7-2
+Added Pin To Net: NetName=U0TXD Pin=U3-26
+Added Net: Name=U0TXD

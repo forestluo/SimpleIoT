@@ -1,0 +1,28 @@
+Component Name : ESP8266-03
+
+Part Count : 2
+
+Part : *
+     Pins - (Normal) : 0
+          Hidden Pins : 
+
+Part : *
+     Pins - (Normal) : 16
+          RST            1              Passive
+          ADC/TOUT       2              Passive
+          EN             3              Passive
+          GPIO16/WAKE    4              Passive
+          GPIO14/HSPICLK 5              Passive
+          GPIO12/HSPIQ   6              Passive
+          GPIO13/HSPID/CTS0/RXD27              Passive
+          GPIO1/SPICS1/TXD016             Passive
+          GPIO3/RXD0     15             Passive
+          GPIO4          14             Passive
+          GPIO5          13             Passive
+          GPIO0/SPICS2   12             Passive
+          GPIO2/TXD1     11             Passive
+          GPIO15/HSPICS/RTS0/TXD210             Passive
+          VDD            8              Passive
+          GND            9              Passive
+          Hidden Pins : 
+

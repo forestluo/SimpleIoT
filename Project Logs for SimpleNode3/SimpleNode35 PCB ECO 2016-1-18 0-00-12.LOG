@@ -1,0 +1,5 @@
+Added Component: Designator=R14(R0402)
+Added Pin To Net: NetName=NetR14_1 Pin=R14-1
+Added Pin To Net: NetName=GND Pin=R14-2
+Added Member To Class: ClassName=SimpleNode31 Member=Component R14 1%
+Added Room: Name=SimpleNode31

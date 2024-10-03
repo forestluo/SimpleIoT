@@ -1,0 +1,52 @@
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=VCC3V3 Pin=C6-2
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=GND Pin=C8-1
+Added Pin To Net: NetName=VCC3V3 Pin=C8-2
+Added Pin To Net: NetName=GND Pin=C9-1
+Added Pin To Net: NetName=VCC3V3 Pin=C9-2
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C11-1
+Added Pin To Net: NetName=VCC3V3 Pin=R8-1
+Added Pin To Net: NetName=GND Pin=R9-1
+Added Pin To Net: NetName=VCC3V3 Pin=R10-1
+Added Pin To Net: NetName=VCC3V3 Pin=R11-1
+Added Pin To Net: NetName=GND Pin=R13-1
+Added Pin To Net: NetName=GND Pin=R14-2
+Added Pin To Net: NetName=VCC3V3 Pin=R15-2
+Added Pin To Net: NetName=VCC3V3 Pin=R17-1
+Added Pin To Net: NetName=GND Pin=R19-1
+Added Pin To Net: NetName=VCC3V3 Pin=U3-1
+Added Pin To Net: NetName=VCC3V3 Pin=U3-3
+Added Pin To Net: NetName=VCC3V3 Pin=U3-4
+Added Pin To Net: NetName=VCC3V3 Pin=U3-11
+Added Pin To Net: NetName=VCC3V3 Pin=U3-17
+Added Pin To Net: NetName=VCC3V3 Pin=U3-29
+Added Pin To Net: NetName=VCC3V3 Pin=U3-30
+Added Pin To Net: NetName=GND Pin=U3-33
+Added Pin To Net: NetName=GND Pin=U4-4
+Added Pin To Net: NetName=VCC3V3 Pin=U4-8
+Added Pin To Net: NetName=GND Pin=Y1-2
+Added Pin To Net: NetName=GND Pin=Y1-4
+Added Member To Class: ClassName=SimpleNode3 Member=Component C6 10V
+Added Member To Class: ClassName=SimpleNode3 Member=Component C7 10V
+Added Member To Class: ClassName=SimpleNode3 Member=Component C8 10V
+Added Member To Class: ClassName=SimpleNode3 Member=Component C9 10V
+Added Member To Class: ClassName=SimpleNode3 Member=Component C10 10V
+Added Member To Class: ClassName=SimpleNode3 Member=Component C11 10V
+Added Member To Class: ClassName=SimpleNode3 Member=Component D6 RST
+Added Member To Class: ClassName=SimpleNode3 Member=Component R8 1%
+Added Member To Class: ClassName=SimpleNode3 Member=Component R9 1%
+Added Member To Class: ClassName=SimpleNode3 Member=Component R10 1%
+Added Member To Class: ClassName=SimpleNode3 Member=Component R11 1%
+Added Member To Class: ClassName=SimpleNode3 Member=Component R12 5%
+Added Member To Class: ClassName=SimpleNode3 Member=Component R13 FLASH
+Added Member To Class: ClassName=SimpleNode3 Member=Component R14 1%
+Added Member To Class: ClassName=SimpleNode3 Member=Component R15 1%
+Added Member To Class: ClassName=SimpleNode3 Member=Component R16 NC
+Added Member To Class: ClassName=SimpleNode3 Member=Component R17 5%
+Added Member To Class: ClassName=SimpleNode3 Member=Component R18 5%
+Added Member To Class: ClassName=SimpleNode3 Member=Component R19 RESET
+Added Member To Class: ClassName=SimpleNode3 Member=Component U3 ESP8266
+Added Member To Class: ClassName=SimpleNode3 Member=Component U4 2M Flash
+Added Member To Class: ClassName=SimpleNode3 Member=Component Y1 26MHz

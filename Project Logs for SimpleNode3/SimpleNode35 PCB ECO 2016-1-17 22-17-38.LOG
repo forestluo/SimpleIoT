@@ -1,0 +1,13 @@
+Added Component: Designator=R11(R0402)
+Added Component: Designator=R12(R0402)
+Added Component: Designator=R13(R0402)
+Added Pin To Net: NetName=GPIO0 Pin=R11-1
+Added Pin To Net: NetName=VCC3V3 Pin=R11-2
+Added Pin To Net: NetName=GPIO0 Pin=R12-1
+Added Pin To Net: NetName=NetR12_2 Pin=R12-2
+Added Pin To Net: NetName=GND Pin=R13-1
+Added Pin To Net: NetName=NetR12_2 Pin=R13-2
+Added Member To Class: ClassName=SimpleNode31 Member=Component R11 5%
+Added Member To Class: ClassName=SimpleNode31 Member=Component R12 5%
+Added Member To Class: ClassName=SimpleNode31 Member=Component R13 FLASH
+Added Room: Name=SimpleNode31

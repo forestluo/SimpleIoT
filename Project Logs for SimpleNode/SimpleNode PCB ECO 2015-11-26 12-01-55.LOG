@@ -1,0 +1,6 @@
+Change Component Footprint: Designator=U4 Old Footprint=SOP16-50-208 New Footprint=SOP16
+Change Component Description : Designator=U5 Old Description=3.3VÎÈÑ¹? New Description=3.3VÎÈÑ¹Ð¾Æ¬
+Change Component Description : Designator=C7 Old Description=Capa New Description=Capacitor
+Change Component Description : Designator=C13 Old Description=Capa New Description=Capacitor
+Change Component Description : Designator=C14 Old Description=Capa New Description=Capacitor
+Change Component Description : Designator=J3 Old Description=USB½Ó? New Description=USB½Ó¿Ú

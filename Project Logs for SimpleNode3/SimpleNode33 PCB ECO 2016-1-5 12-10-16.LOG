@@ -1,0 +1,9 @@
+Added Component: Designator=D3(LED0402)
+Added Component: Designator=R1(R0402)
+Added Pin To Net: NetName=GND Pin=D3-2
+Added Pin To Net: NetName=VCC5V Pin=R1-1
+Added Pin To Net: NetName=NetD3_1 Pin=D3-1
+Added Pin To Net: NetName=NetD3_1 Pin=R1-2
+Added Net: Name=NetD3_1
+Added Member To Class: ClassName=SimpleNode3 Member=Component D3 STA
+Added Member To Class: ClassName=SimpleNode3 Member=Component R1 5%

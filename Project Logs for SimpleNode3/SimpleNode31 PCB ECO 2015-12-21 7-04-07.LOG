@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=RXD Pin=U2-19
+Added Pin To Net: NetName=RXD Pin=U2-18

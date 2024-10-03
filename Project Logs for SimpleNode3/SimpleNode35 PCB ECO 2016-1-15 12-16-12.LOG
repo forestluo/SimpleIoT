@@ -1,0 +1,4 @@
+Change Component Description : Designator=U2 Old Description= New Description=贴片USB转TTL
+Change Component Description : Designator=U3 Old Description=ESP826 New Description=ESP8266无线WiFi芯片
+Change Component Description : Designator=U1 Old Description=贴 New Description=贴片5V转3.3V芯片
+Added Room: Name=SimpleNode31

@@ -1,0 +1,10 @@
+Change Component Comment : Designator=D3 Old Comment=STA New Comment=PW5V
+Added Component: Designator=D4(LED0402)
+Added Component: Designator=R2(R0402)
+Added Pin To Net: NetName=GND Pin=D4-2
+Added Pin To Net: NetName=VCC3V3 Pin=R2-2
+Added Pin To Net: NetName=NetD4_1 Pin=D4-1
+Added Pin To Net: NetName=NetD4_1 Pin=R2-1
+Added Net: Name=NetD4_1
+Added Member To Class: ClassName=SimpleNode3 Member=Component D4 PW3V3
+Added Member To Class: ClassName=SimpleNode3 Member=Component R2 5%

@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=GND Pin=U2-17
+Removed Pin From Net: NetName=GND Pin=U2-18
+Removed Pin From Net: NetName=GND Pin=U2-19
+Removed Pin From Net: NetName=TXD Pin=U2-20
+Removed Pin From Net: NetName=RXD Pin=U2-21
+Change Component Description : Designator=U2 Old Description= New Description=ÌùÆ¬USB×ªTTL
+Change Component Description : Designator=Y1 Old Description= New Description=ÌùÆ¬ÎÞÔ´¾§Õñ
+Change Component Description : Designator=U3 Old Description=ESP826 New Description=ESP8266ÎÞÏßWiFiÐ¾Æ¬
+Change Component Description : Designator=U1 Old Description=Ìù New Description=ÌùÆ¬5V×ª3.3VÐ¾Æ¬
+Change Component Description : Designator=U4 Old Description=ÌùÆ¬ New Description=ÌùÆ¬2M´æ´¢FlashÐ¾Æ¬
+Added Pin To Net: NetName=TXD Pin=U2-17
+Added Pin To Net: NetName=RXD Pin=U2-19
+Added Member To Class: ClassName=SimpleNode3 Member=Component J1 USB-A

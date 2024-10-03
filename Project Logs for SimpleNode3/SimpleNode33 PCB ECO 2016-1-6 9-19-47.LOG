@@ -1,0 +1,71 @@
+Change Component DesignItemId : Designator=U2 Old DesignItemId= New DesignItemId=CP2102
+Change Component DesignItemId : Designator=A1 Old DesignItemId= New DesignItemId=IPEX-1 底座
+Change Component DesignItemId : Designator=J2 Old DesignItemId= New DesignItemId=TFCard 卡座 简易
+Change Component DesignItemId : Designator=J1 Old DesignItemId= New DesignItemId=USB-A 公头
+Change Component DesignItemId : Designator=D1 Old DesignItemId= New DesignItemId=贴片发光二级管
+Change Component DesignItemId : Designator=D2 Old DesignItemId= New DesignItemId=贴片发光二级管
+Change Component DesignItemId : Designator=C1 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=C2 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=C3 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=C4 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=C5 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=C6 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=C7 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=C9 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=C10 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=C11 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=C12 Old DesignItemId= New DesignItemId=贴片无极性电容
+Change Component DesignItemId : Designator=Y1 Old DesignItemId= New DesignItemId=贴片无源晶振
+Change Component DesignItemId : Designator=R3 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component DesignItemId : Designator=R6 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component DesignItemId : Designator=R7 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component DesignItemId : Designator=R8 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component DesignItemId : Designator=R9 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component DesignItemId : Designator=R10 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component DesignItemId : Designator=R11 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component DesignItemId : Designator=R12 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component DesignItemId : Designator=R13 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component DesignItemId : Designator=R14 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component DesignItemId : Designator=R15 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component DesignItemId : Designator=R19 Old DesignItemId= New DesignItemId=贴片电阻
+Change Component Description : Designator=U3 Old Description= New Description=ESP8266无线WiFi芯片
+Change Component Description : Designator=A1 Old Description= New Description=IPEX-1 底座
+Change Component Description : Designator=J2 Old Description= New Description=TFCard 卡座 简易
+Change Component Description : Designator=J1 Old Description= New Description=USB-A 公头
+Change Component Description : Designator=U4 Old Description= New Description=贴片2M存储Flash芯片
+Change Component Description : Designator=U1 Old Description= New Description=贴片5V转3.3V芯片
+Change Component Description : Designator=U2 Old Description= New Description=贴片USB转TTL
+Change Component Description : Designator=D1 Old Description= New Description=贴片发光二级管
+Change Component Description : Designator=D2 Old Description= New Description=贴片发光二级管
+Change Component Description : Designator=C1 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C2 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C3 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C4 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C5 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C6 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C7 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C9 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C10 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C11 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=C12 Old Description= New Description=贴片无极性电容
+Change Component Description : Designator=Y1 Old Description= New Description=贴片无源晶振
+Change Component Description : Designator=R1 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R2 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R3 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R4 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R5 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R6 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R7 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R8 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R9 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R10 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R11 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R12 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R13 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R14 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R15 Old Description= New Description=贴片电阻
+Change Component Description : Designator=R19 Old Description= New Description=贴片电阻
+Added Component: Designator=C8(C0402)
+Added Pin To Net: NetName=GND Pin=C8-1
+Added Pin To Net: NetName=VCC5V Pin=C8-2
+Added Member To Class: ClassName=SimpleNode3 Member=Component C8 CAP

@@ -1,0 +1,53 @@
+Added Component: Designator=J1(USB 2.0 Type A ¹«Í· ³Á°å)
+Added Net: Name=ADC
+Added Pin To Net: NetName=GND Pin=J1-4
+Added Pin To Net: NetName=GND Pin=J1-4
+Added Pin To Net: NetName=GND Pin=J1-4
+Added Net: Name=GND
+Added Net: Name=GPIO0
+Added Net: Name=GPIO2
+Added Net: Name=GPIO4
+Added Net: Name=GPIO5
+Added Net: Name=GPIO12
+Added Net: Name=GPIO13
+Added Net: Name=GPIO14
+Added Net: Name=GPIO15
+Added Net: Name=GPIO16
+Added Net: Name=NetA1_1
+Added Net: Name=NetC2_2
+Added Net: Name=NetC4_2
+Added Net: Name=NetC7_2
+Added Net: Name=NetC10_1
+Added Net: Name=NetC11_1
+Added Net: Name=NetC12_2
+Added Net: Name=NetD1_1
+Added Net: Name=NetD2_2
+Added Net: Name=NetD3_1
+Added Net: Name=NetD4_1
+Added Net: Name=NetD6_1
+Added Net: Name=NetD7_1
+Added Net: Name=NetR3_1
+Added Net: Name=NetR8_2
+Added Net: Name=NetR12_2
+Added Net: Name=NetR14_1
+Added Net: Name=RXD
+Added Net: Name=SD_CLK
+Added Net: Name=SD_CMD
+Added Net: Name=SD_DATA_0
+Added Net: Name=SD_DATA_1
+Added Net: Name=SD_DATA_2
+Added Net: Name=SD_DATA_3
+Added Net: Name=TXD
+Added Net: Name=U0RXD
+Added Net: Name=U0TXD
+Added Pin To Net: NetName=UD_N Pin=J1-2
+Added Net: Name=UD_N
+Added Pin To Net: NetName=UD_P Pin=J1-3
+Added Net: Name=UD_P
+Added Net: Name=VCC3V3
+Added Pin To Net: NetName=VCC5V Pin=J1-1
+Added Pin To Net: NetName=VCC5V Pin=J1-1
+Added Net: Name=VCC5V
+Added Class: Name=SimpleNode31
+Added Differential Pair: Name=UD
+Added Room: Name=SimpleNode31

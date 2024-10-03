@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=VCC5V Pin=R1-2
+Added Pin To Net: NetName=VCC3V3 Pin=R2-1
+Added Member To Class: ClassName=SimpleNode3 Member=Component R1 5%
+Added Member To Class: ClassName=SimpleNode3 Member=Component R2 5%

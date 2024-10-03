@@ -1,0 +1,20 @@
+Added Component: Designator=A1(AN9520-245)
+Added Component: Designator=U4(SOP8)
+Added Component: Designator=Y1(XTAL-2520)
+Added Pin To Net: NetName=NetA1_1 Pin=A1-1
+Added Pin To Net: NetName=SD_CMD Pin=U4-1
+Added Pin To Net: NetName=SD_DATA_0 Pin=U4-2
+Added Pin To Net: NetName=SD_DATA_3 Pin=U4-3
+Added Pin To Net: NetName=GND Pin=U4-4
+Added Pin To Net: NetName=SD_DATA_1 Pin=U4-5
+Added Pin To Net: NetName=SD_CLK Pin=U4-6
+Added Pin To Net: NetName=SD_DATA_2 Pin=U4-7
+Added Pin To Net: NetName=VCC3V3 Pin=U4-8
+Added Pin To Net: NetName=NetC11_1 Pin=Y1-1
+Added Pin To Net: NetName=GND Pin=Y1-2
+Added Pin To Net: NetName=NetC10_1 Pin=Y1-3
+Added Pin To Net: NetName=GND Pin=Y1-4
+Added Member To Class: ClassName=SimpleNode31 Member=Component A1 2.4GHz
+Added Member To Class: ClassName=SimpleNode31 Member=Component U4 2M Flash
+Added Member To Class: ClassName=SimpleNode31 Member=Component Y1 10ppm
+Added Room: Name=SimpleNode31

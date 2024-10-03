@@ -1,0 +1,125 @@
+Protel Design System Design Rule Check
+PCB File : E:\Altium Designer\SimpleIoT\SimpleNode2.PcbDoc
+Date     : 2015/12/9
+Time     : 10:10:14
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
+   Violation between Text "C2" (68.072mm,62.357mm)  Bottom Overlay and 
+                     Arc (70.279mm,63.119mm)  Bottom Overlay
+   Violation between Text "C7" (65.405mm,78.74mm)  Bottom Overlay and 
+                     Arc (67.612mm,79.502mm)  Bottom Overlay
+   Violation between Text "C3" (77.724mm,68.58mm)  Bottom Overlay and 
+                     Arc (78.486mm,66.373mm)  Bottom Overlay
+   Violation between Text "C4" (79.629mm,68.58mm)  Bottom Overlay and 
+                     Arc (80.391mm,66.373mm)  Bottom Overlay
+   Violation between Text "C5" (79.248mm,78.232mm)  Bottom Overlay and 
+                     Arc (78.486mm,73.485mm)  Bottom Overlay
+   Violation between Text "C6" (81.153mm,78.232mm)  Bottom Overlay and 
+                     Arc (80.391mm,73.485mm)  Bottom Overlay
+   Violation between Text "U2" (72.771mm,75.184mm)  Top Overlay and 
+                     Track (74.433mm,68.787mm)(74.433mm,78.787mm)  Top Overlay
+   Violation between Text "U2" (72.771mm,75.184mm)  Top Overlay and 
+                     Track (72.633mm,68.787mm)(72.633mm,78.787mm)  Top Overlay
+   Violation between Text "R3" (81.28mm,77.597mm)  Top Overlay and 
+                     Text "D3" (81.28mm,75.565mm)  Top Overlay
+   Violation between Text "R4" (81.28mm,70.612mm)  Top Overlay and 
+                     Text "D4" (81.28mm,68.707mm)  Top Overlay
+   Violation between Text "C4" (79.629mm,68.58mm)  Bottom Overlay and 
+                     Text "C3" (77.724mm,68.58mm)  Bottom Overlay
+   Violation between Text "C6" (81.153mm,78.232mm)  Bottom Overlay and 
+                     Text "C5" (79.248mm,78.232mm)  Bottom Overlay
+Rule Violations :12
+
+Processing Rule : Silkscreen Over Component Pads (Clearance=0mm) (Disabled)(All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
+   Violation between Via (69.088mm,75.438mm) Top Layer to Bottom Layer and 
+                     Pad U2-3(71.133mm,75.692mm)  Top Layer
+   Violation between Via (69.088mm,77.089mm) Top Layer to Bottom Layer and 
+                     Pad U2-2(71.133mm,76.962mm)  Top Layer
+   Violation between Via (69.088mm,75.438mm) Top Layer to Bottom Layer and 
+                     Via (69.088mm,77.089mm) Top Layer to Bottom Layer
+Rule Violations :3
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (InDifferentialPair('USB Data Line Pair'))
+Rule Violations :0
+
+Processing Rule : Matched Net Lengths(Tolerance=25.4mm) (InDifferentialPair ('USB Data Line Pair'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (InDifferentialPair('USB Data Line Pair'))
+Rule Violations :0
+
+Processing Rule : Matched Net Lengths(Tolerance=25.4mm) (InDifferentialPair ('USB Data Line Pair'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (InDifferentialPair('RS232 Data Line Pair'))
+Rule Violations :0
+
+Processing Rule : Matched Net Lengths(Tolerance=25.4mm) (InDifferentialPair ('RS232 Data Line Pair'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (InDifferentialPair('XTAL Data Line Pair'))
+Rule Violations :0
+
+Processing Rule : Matched Net Lengths(Tolerance=25.4mm) (InDifferentialPair ('XTAL Data Line Pair'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Matched Net Lengths(Tolerance=25.4mm) (All)
+   Violation between Matched Net Lengths: Net NetC7_2
+   Violation between Matched Net Lengths: Net NetD2_1
+   Violation between Matched Net Lengths: Net NetD1_1
+   Violation between Matched Net Lengths: Net NetD3_1
+   Violation between Matched Net Lengths: Net NetD4_1
+   Violation between Matched Net Lengths: Net UD+
+   Violation between Matched Net Lengths: Net UD-
+   Violation between Matched Net Lengths: Net VCC3V3
+   Violation between Matched Net Lengths: Net VCC5V
+Rule Violations :9
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (InDifferentialPair('XTAL Line Pair'))
+Rule Violations :0
+
+Processing Rule : Matched Net Lengths(Tolerance=25.4mm) (InDifferentialPair ('XTAL Line Pair'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (InDifferentialPair('RS232 Line Pair'))
+Rule Violations :0
+
+Processing Rule : Matched Net Lengths(Tolerance=25.4mm) (InDifferentialPair ('RS232 Line Pair'))
+Rule Violations :0
+
+
+Violations Detected : 24
+Time Elapsed        : 00:00:00
